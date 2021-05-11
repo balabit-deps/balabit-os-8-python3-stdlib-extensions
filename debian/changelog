@@ -1,9 +1,78 @@
-python3-stdlib-extensions (3.8.5-1~20.04.1) focal-proposed; urgency=medium
+python3-stdlib-extensions (3.8.10-0ubuntu1~20.04) focal; urgency=medium
 
-  * SRU: LP: #1889218. Backport Python 3.8.5 to 20.04 LTS.
-  * Build as well for 3.9, except on i386.
+  * SRU: LP: #1899159: Backport Python 3.9.5 to 20.04 LTS.
 
- -- Matthias Klose <doko@ubuntu.com>  Mon, 10 Aug 2020 14:24:47 +0200
+ -- Matthias Klose <doko@ubuntu.com>  Tue, 11 May 2021 10:35:23 +0200
+
+python3-stdlib-extensions (3.9.5-0ubuntu3) impish; urgency=medium
+
+  * When building 3.10 for releases newer than Debian 11 (bullseye) or
+    Ubuntu 21.04 (hirsute), build the _dbm extension using gdbm, and
+    include it in the python3-gdbm package.
+
+ -- Matthias Klose <doko@ubuntu.com>  Thu, 06 May 2021 15:16:46 +0200
+
+python3-stdlib-extensions (3.9.5-0ubuntu2) impish; urgency=medium
+
+  * Relax dependency on python3-defaults.
+
+ -- Matthias Klose <doko@ubuntu.com>  Tue, 04 May 2021 15:47:57 +0200
+
+python3-stdlib-extensions (3.9.5-0ubuntu1) impish; urgency=medium
+
+  * Update 3.10 extensions and modules to the 3.9.10 beta1 snapshot.
+  * Update 3.9  extensions and modules to the 3.9.5 release (no changes).
+  * Update 3.8  extensions and modules to the 3.8.10 release (no changes).
+  * python3-distutils, python3-lib2to3: Breaks the stdlib (<< 3.10.0~b1).
+  * Refresh patches.
+
+ -- Matthias Klose <doko@ubuntu.com>  Tue, 04 May 2021 07:33:35 +0200
+
+python3-stdlib-extensions (3.9.4-0ubuntu1) hirsute; urgency=medium
+
+  * Update 3.10 extensions and modules to the 3.9.10 alpha7 snapshot.
+  * Update 3.9  extensions and modules to the 3.9.4 release (no changes).
+  * Update 3.8  extensions and modules to the 3.8.7 release (no changes).
+
+ -- Matthias Klose <doko@ubuntu.com>  Tue, 06 Apr 2021 15:13:31 +0200
+
+python3-stdlib-extensions (3.9.2-1) unstable; urgency=medium
+
+  * Update 3.9 extensions and modules to the 3.9.2 release.
+    IDLE changes:
+    - bpo-23544: Disable Debug=>Stack Viewer when user code is running or
+      Debugger is active, to prevent hang or crash.
+    - bpo-43008: Make IDLE invoke :func:`sys.excepthook` in normal,
+      2-process mode.
+    - bpo-33065: Fix problem debugging user classes with __repr__ method.
+    - bpo-32631: Finish zzdummy example extension module: make menu entries
+      work; add docstrings and tests with 100% coverage.
+
+ -- Matthias Klose <doko@debian.org>  Sat, 20 Feb 2021 12:43:30 +0100
+
+python3-stdlib-extensions (3.9.1-2) unstable; urgency=medium
+
+  * Fix removing old 3.8 files. Closes: #961274.
+
+ -- Matthias Klose <doko@debian.org>  Sun, 03 Jan 2021 12:11:48 +0100
+
+python3-stdlib-extensions (3.9.1-1) unstable; urgency=medium
+
+  * Update 3.9 extensions and modules to the 3.9.1 release.
+  * Update 3.8 extensions and modules to the 3.8.7 release.
+  * Stop building the extensions for 3.8. Closes: #976846.
+  * python3-lib2to3, python3-distutils: Add the :any qualifier to the
+    python3 dependencies. See: #964330.
+  * Bump standards versions.
+
+ -- Matthias Klose <doko@debian.org>  Tue, 22 Dec 2020 19:55:15 +0100
+
+python3-stdlib-extensions (3.8.6-1) unstable; urgency=medium
+
+  * Update 3.8 extensions and modules to the 3.8.6 release.
+  * Update 3.9 extensions and modules to the 3.9.0 release.
+
+ -- Matthias Klose <doko@debian.org>  Mon, 05 Oct 2020 23:26:38 +0200
 
 python3-stdlib-extensions (3.8.5-1) unstable; urgency=medium
 
